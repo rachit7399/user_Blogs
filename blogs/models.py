@@ -2,6 +2,10 @@ from authentication.models import User, BaseModel
 from django.db import models
 
 # Create your models here.
+
+class Tags(BaseModel):
+    name = models.CharField(max_length=255, null=True, blank=True)
+
 class Blogs(BaseModel):
 
     user = models.ForeignKey(User,
@@ -10,6 +14,7 @@ class Blogs(BaseModel):
 
     title = models.CharField(max_length=255, null=True, blank=True)
 
+    tags = models.ManyToManyField(Tags)
     content = models.TextField()
                          
 

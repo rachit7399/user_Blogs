@@ -40,7 +40,6 @@ class VerifyEmail(generics.GenericAPIView):
 class LoginView(generics.GenericAPIView):
     serializer_class = LoginSerializer
     def post(self, request):
-        import pdb; pdb.set_trace()
         user = self.request.data
         try:
             
