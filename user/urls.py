@@ -20,7 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('authentication.urls')),
     path('follow/', include('follower_tracker.urls')),
-    path('blogs/', include('blogs.urls')),
+    path('', include('blogs.urls')),
 
 
 ]
