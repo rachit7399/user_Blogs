@@ -1,8 +1,17 @@
 from rest_framework import serializers
 from .models import *
 
-class CreateBlogSerializer(serializers.ModelSerializer):
+class TagsBlogSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tags
+        fields = ['name']
+        
+    def validate(self, attrs):
+        return attrs
 
+class CreateBlogSerializer(serializers.ModelSerializer):
+    tags = TagsBlogSerializer(read_only = True, many = True)
+    
     class Meta:
         model = Blogs
         fields = '__all__'
