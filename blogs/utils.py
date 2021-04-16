@@ -1,16 +1,43 @@
 from rest_framework import filters
 from .helper import *
-from .models import Tags
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 from rest_framework.decorators import action
-from .serializers import CommentSerializer, LikeSerializer
 from rest_framework import status
+from rest_framework.pagination import PageNumberPagination
+from django.contrib.sites.shortcuts import get_current_site
 
-class CrudMixin:
+class PaginationHandlerMixin(object):
+    @property
+    def paginator(self):
+        if not hasattr(self, '_paginator'):
+            if self.pagination_class is None:
+                self._paginator = None
+            else:
+                self._paginator = self.pagination_class()
+        else:
+            pass
+        return self._paginator
+    def paginate_queryset(self, queryset):
+        
+        if self.paginator is None:
+            return None
+        return self.paginator.paginate_queryset(queryset,
+                   self.request, view=self)
+    def get_paginated_response(self, data):
+        assert self.paginator is not None
+        return self.paginator.get_paginated_response(data)
+
+
+class CrudMixin(PaginationHandlerMixin):
+    pagination_class    = PageNumberPagination
     def list(self, request):
         queryset = search_tag(request, self.filter_queryset(self.model_class.objects.filter(user = request.user) ))
-        serializer = self.serializer_class(queryset, many=True)
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_paginated_response(self.serializer_class(page, many=True).data)
+        else:
+            serializer = self.serializer_class(queryset, many=True)
         return Response(serializer.data)
 
     def retrieve(self, request, pk=None):
@@ -20,20 +47,25 @@ class CrudMixin:
         return Response(serializer.data)
 
     def create(self, request):
+        file_uploaded = request.FILES.get('file_uploaded')
         serializer = self.serializer_class(data={
             **{
                 "title": request.data["title"],
                 "content": request.data["content"],
+                "media":file_uploaded,
                 "user": request.user.uid,
             }
         })
         serializer.is_valid(raise_exception=True)
         blog = serializer.save()
         add_tag(request, blog)
+        _data = serializer.data
+        absurl = get_current_site(request).domain
+        _data["media"] = 'http://' + absurl + _data["media"]
         return Response({
             'status': True,
             'message': 'object creation Successful',
-            'data': serializer.data
+            'data': _data
         })  
 
     def update(self, request, pk):

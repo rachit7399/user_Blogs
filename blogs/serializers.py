@@ -1,5 +1,12 @@
 from rest_framework import serializers
+from rest_framework.serializers import FileField
 from .models import *
+
+class UploadSerializer(serializers.ModelSerializer):
+    file_uploaded = FileField()
+    class Meta:
+        fields = ['file_uploaded']
+        
 
 class TagsBlogSerializer(serializers.ModelSerializer):
     class Meta:

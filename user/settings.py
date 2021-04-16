@@ -93,16 +93,28 @@ SIMPLE_JWT = {
 }
 
 REST_FRAMEWORK = {
-    'NON_FIELD_ERRORS_KEY':'error',
 
-    'DEFAULT_AUTHENTICATION_CLASSES': ( 'rest_framework_simplejwt.authentication.JWTAuthentication',)
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+
+    'PAGE_SIZE': 20,
+
+    'DEFAULT_PARSER_CLASSES': (
+        'rest_framework.parsers.FormParser',
+        'rest_framework.parsers.MultiPartParser'
+     ),
+    # 'NON_FIELD_ERRORS_KEY':'error',
+
+    'DEFAULT_AUTHENTICATION_CLASSES': ( 'rest_framework_simplejwt.authentication.JWTAuthentication',),
+
         
 }
 GRAPH_MODELS = {
   'all_applications': True,
   'group_models': True,
 }
-
+ 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'doc')
+MEDIA_URL = '/'
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -142,7 +154,7 @@ STATIC_URL = '/static/'
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'rachit.b@engineerbabu.in')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'Rachitshivani@00')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '******')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '*****')
 EMAIL_PORT = 587
 

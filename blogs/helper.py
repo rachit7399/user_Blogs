@@ -3,14 +3,14 @@ from .serializers import CommentSerializer, LikeSerializer
 from rest_framework.response import Response
 
 def search_tag(request, queryset):
-    tag_search = request.query_params.get("tag_search", "null")
-    if(tag_search != "null"):
+    tag_search = request.query_params.get("tag_search", None)
+    if(tag_search != None):
         queryset = queryset.filter(tags__name = tag_search)
     return queryset
 
 
 def add_tag(request, blog):
-    tags_list = get_tags_list(request.data["tags"])
+    tags_list = get_tags_list(request.data["tags"].split(','))
     for tag in tags_list:
         blog.tags.add(tag)
     blog.save()

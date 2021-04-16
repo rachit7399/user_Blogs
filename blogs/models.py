@@ -16,7 +16,7 @@ class Blogs(BaseModel):
                              related_name="blogs_user")
 
     title = models.CharField(max_length=255, null=True, blank=True)
-
+    media = models.FileField(blank=True, null=True, upload_to='doc/')
     tags = models.ManyToManyField(Tags)
     content = models.TextField()
                          
