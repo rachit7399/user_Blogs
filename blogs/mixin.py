@@ -1,6 +1,6 @@
 from rest_framework import filters
 from rest_framework.response import Response
-from .models import Tags
+from .models import Tags, Likes
 
 
 
@@ -38,13 +38,14 @@ class BaseFilterMixin:
 
 
 class LikeCommentMixin:
-    def like_comment_function(self, uid, msg, *args, **kwargs):
-        import pdb; pdb.set_trace()
-        blog_id = kwargs.pop('blog_id')
+
+    def comment_function(self, request, msg, *args, **kwargs):
+        blog_id = kwargs.pop('pk')
         blog = self.model_class.objects.get(uid = blog_id)
         serializer = self.serializer_class(data={
             **{
-                "user": uid,
+                "comment": request.data["comment"],
+                "user": request.user.uid,
                 "blog" : blog.uid
             }
         })   
@@ -54,6 +55,29 @@ class LikeCommentMixin:
             'status': True,
             'message': msg,
             'data': serializer.data
+        })
+
+    def like_function(self, request, msg, *args, **kwargs):
+        blog_id = kwargs.pop('pk')
+        blog = self.model_class.objects.get(uid = blog_id)
+        if(Likes.objects.filter(blog__uid = blog_id).exists()):
+            Likes.objects.filter(blog__uid = blog_id).delete()
+            msg = "Disliked Successfull"
+            _data = []
+        else:
+            serializer = self.serializer_class(data={
+                **{
+                    "user": request.user.uid,
+                    "blog" : blog.uid
+                }
+            })   
+            serializer.is_valid(raise_exception=True)   
+            serializer.save() 
+            _data = serializer.data   
+        return Response({
+            'status': True,
+            'message': msg,
+            'data': _data
         })
 
 

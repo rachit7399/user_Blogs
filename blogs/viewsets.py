@@ -1,3 +1,5 @@
+from django.db.models.query import QuerySet
+from blogs.models import Comments
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 from rest_framework.decorators import action
@@ -83,24 +85,56 @@ class CrudViewset(PaginationHandlerMixin, BaseFilterMixin, TagMixin):
 
 
 class CommentViewset(LikeCommentMixin):
-    @action(methods=["POST"],detail=False,url_path="comment/(?P<blog_id>[^/.]+)",url_name="comment")
+    @action(methods=["POST"], detail=True)
     def comment(self, request, *args, **kwargs):
         try:
             self.serializer_class = CommentSerializer
-            return self.like_comment_function(request.user.uid, "Comment Successful", *args, **kwargs)
+            return self.comment_function(request, "Comment Successful", *args, **kwargs)
+        except Exception:
+            return Response({"Failed"}, status.HTTP_400_BAD_REQUEST)
+    
+    @action(methods=["GET"], detail=True)
+    def get_comments(self, request, *args, **kwargs):
+        try:
+            self.serializer_class = CommentSerializer
+            self.model_class = Comments
+            QuerySet = self.model_class.objects.filter(blog__uid = kwargs["pk"])
+            _data = []
+            for comment_obj in QuerySet:
+                _data.append(self.serializer_class(comment_obj).data)
+
+            return Response({
+                'status': True,
+                'message': 'All Comments',
+                'data': _data
+            })
+
+            
+        except Exception:
+            return Response({"Failed"}, status.HTTP_400_BAD_REQUEST)
+
+    @action(methods=["DELETE"], detail=True)
+    def delete_comment(self, request, *args, **kwargs):
+        try:
+            self.serializer_class = CommentSerializer
+            self.model_class = Comments
+            self.model_class.objects.filter(uid = kwargs["pk"]).delete()
+            return Response({
+                'status': True,
+                'message': 'Delete Successfull',
+                'data': []
+            })
+
         except Exception:
             return Response({"Failed"}, status.HTTP_400_BAD_REQUEST)
 
 
-
-
 class LikeViewset(LikeCommentMixin):
-    @action(methods=["GET"],detail=False,url_path="like/(?P<blog_id>[^/.]+)",url_name="like")
+    @action(methods=["GET"], detail=True)
     def like(self, request, *args, **kwargs):
         try:
             self.serializer_class = LikeSerializer
-            import pdb; pdb.set_trace()
-            return self.like_comment_function(request.user.uid, "liked Successful", *args, **kwargs)
+            return self.like_function(request, "liked Successful", *args, **kwargs)
         except Exception:
             return Response({"Failed"}, status.HTTP_400_BAD_REQUEST)
 
