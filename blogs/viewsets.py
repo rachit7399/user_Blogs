@@ -94,7 +94,7 @@ class CommentViewset(LikeCommentMixin):
             return Response({"Failed"}, status.HTTP_400_BAD_REQUEST)
     
     @action(methods=["GET"], detail=True)
-    def get_comments(self, request, *args, **kwargs):
+    def get_all_comments(self, request, *args, **kwargs):
         try:
             self.serializer_class = CommentSerializer
             self.model_class = Comments
@@ -113,12 +113,46 @@ class CommentViewset(LikeCommentMixin):
         except Exception:
             return Response({"Failed"}, status.HTTP_400_BAD_REQUEST)
 
+    @action(methods=["GET"], detail=True)
+    def get_comment(self, request, *args, **kwargs):
+        try:
+            self.serializer_class = CommentSerializer
+            self.model_class = Comments
+            comment_obj = self.model_class.objects.get(uid = kwargs["pk"])
+            _data = self.serializer_class(comment_obj).data
+            return Response({
+                'status': True,
+                'message': 'Successfull',
+                'data': _data
+            })
+
+        except Exception:
+            return Response({"Failed"}, status.HTTP_400_BAD_REQUEST)
+
+    @action(methods=["POST"], detail=True)
+    def update_comment(self, request, *args, **kwargs):
+        try:
+            self.serializer_class = CommentSerializer
+            self.model_class = Comments
+            comment_obj = self.model_class.objects.get(uid = kwargs["pk"])
+            comment_obj.comment = request.data["comment"]
+            comment_obj.save()
+            _data = self.serializer_class(comment_obj).data
+            return Response({
+                'status': True,
+                'message': 'updated Successfully',
+                'data': _data
+            })
+
+        except Exception:
+            return Response({"Failed"}, status.HTTP_400_BAD_REQUEST)
+
     @action(methods=["DELETE"], detail=True)
     def delete_comment(self, request, *args, **kwargs):
         try:
             self.serializer_class = CommentSerializer
             self.model_class = Comments
-            self.model_class.objects.filter(uid = kwargs["pk"]).delete()
+            self.model_class.objects.get(uid = kwargs["pk"]).delete()
             return Response({
                 'status': True,
                 'message': 'Delete Successfull',
