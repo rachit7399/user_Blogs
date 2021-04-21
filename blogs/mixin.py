@@ -1,7 +1,7 @@
 from rest_framework import filters
 from rest_framework.response import Response
-from .models import Tags, Likes
-
+from .models import  Tags, Likes, Activity
+import logging
 
 
 class PaginationHandlerMixin(object):
@@ -50,7 +50,10 @@ class LikeCommentMixin:
             }
         })   
         serializer.is_valid(raise_exception=True)   
-        serializer.save()      
+        serializer.save()   
+        logging.info("commented on blog with uid = '%s'", str(blog.uid)) 
+        msg = "comented : " + str(request.data["comment"])
+        obj = Activity.objects.create(blog = blog, user = request.user, msg = msg)  
         return Response({
             'status': True,
             'message': msg,
@@ -64,6 +67,8 @@ class LikeCommentMixin:
             Likes.objects.filter(blog__uid = blog_id).delete()
             msg = "Disliked Successfull"
             _data = []
+            obj = Activity.objects.create(blog = blog, user = request.user, msg = "Disliked")  
+            logging.info("disliked on blog with uid = '%s'", str(blog.uid)) 
         else:
             serializer = self.serializer_class(data={
                 **{
@@ -73,7 +78,9 @@ class LikeCommentMixin:
             })   
             serializer.is_valid(raise_exception=True)   
             serializer.save() 
-            _data = serializer.data   
+            _data = serializer.data  
+            obj = Activity.objects.create(blog = blog, user = request.user, msg = "liked")  
+            logging.info("liked on blog with uid = '%s'", str(blog.uid))  
         return Response({
             'status': True,
             'message': msg,
@@ -87,7 +94,8 @@ class TagMixin():
     def get_tags_list(self, lst_with_tag_name):
         lst_with_tag_uid = []
         for i in lst_with_tag_name:
-            lst_with_tag_uid.append(Tags.objects.get_or_create(name = i)[0].uid)
+            if(i != ""):
+                lst_with_tag_uid.append(Tags.objects.get_or_create(name = i.lower())[0].uid)
         return lst_with_tag_uid
 
     def search_tag(self, request, queryset):

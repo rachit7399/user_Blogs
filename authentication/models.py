@@ -19,6 +19,8 @@ class BaseModel(models.Model):
         abstract = True
 
 class User(AbstractBaseUser, PermissionsMixin, BaseModel):
+    first_name = models.CharField(max_length=255, blank=False, default="demo_first_name")
+    last_name = models.CharField(max_length=255, blank=False, default="demo_last_name")
     email = models.EmailField(max_length=255, unique=True, db_index=True)
     is_verified = models.BooleanField(default=False)
     is_active = models.BooleanField(default=False)

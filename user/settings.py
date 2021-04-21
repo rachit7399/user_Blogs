@@ -158,3 +158,69 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '*****')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '*****')
 EMAIL_PORT = 587
 
+
+### Logger Settings start from here.
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format':
+            "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt': "%d/%b/%Y %H:%M:%S"
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        # 'logfile': {
+        #     'level': 'DEBUG',
+        #     'class': 'logging.FileHandler',
+        #     'filename': 'api.log',
+        #     'formatter': 'verbose',
+        # },
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'django.db.backend': {
+            'handlers': ['console'],
+            "level": "DEBUG",
+            'propagate': True,
+        },
+        'credential_manager': {
+            "handlers": ['console'],
+            "level": "DEBUG",
+            'propagate': True,
+        },
+        'configuration': {
+            "handlers": ['console'],
+            "level": "DEBUG",
+            'propagate': True,
+        },
+        'backup': {
+            "handlers": ['console'],
+            "level": "DEBUG",
+            'propagate': True,
+        },
+        'installation': {
+            "handlers": ['console'],
+            "level": "DEBUG",
+            'propagate': True,
+        },
+        'directory': {
+            "handlers": ['console'],
+            "level": "DEBUG",
+            'propagate': True,
+        },
+        'organization': {
+            "handlers": ['console'],
+            "level": "DEBUG",
+            'propagate': True,
+        },
+    },
+}
+

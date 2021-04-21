@@ -41,4 +41,18 @@ class Likes(BaseModel):
     user = models.ForeignKey(User,
                              on_delete=models.CASCADE,
                              related_name="like_user")
+
+
+class Activity(BaseModel):
+    user = models.ForeignKey(User,
+                            on_delete=models.CASCADE,
+                            related_name="activity_user")
+
+    blog = models.ForeignKey(Blogs,
+                             on_delete=models.CASCADE,
+                             related_name="activity_blogs")
+    
+    msg = models.TextField()
+
+
                          

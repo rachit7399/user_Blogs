@@ -1,0 +1,89 @@
+2021-04-20 16:44:36,761 [INFO] list of blogs for the user 'e3673499-cedc-468d-b45e-f6d083c7dc2a'
+2021-04-20 16:45:21,629 [INFO] list of blogs for the user 'e3673499-cedc-468d-b45e-f6d083c7dc2a'
+2021-04-20 16:46:18,526 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-20 16:46:25,453 [INFO] liked on blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-20 16:47:13,825 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-20 16:47:41,141 [INFO] liked on blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-20 16:49:28,947 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-20 16:50:05,416 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\mixin.py changed, reloading.
+2021-04-20 16:50:43,190 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-20 17:00:58,658 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\models.py changed, reloading.
+2021-04-20 17:05:16,355 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\mixin.py changed, reloading.
+2021-04-20 17:05:41,746 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-20 17:05:49,919 [INFO] blog details of '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-20 17:05:50,044 [ERROR] Internal Server Error: /blogs/3b97bb92-be6e-4653-af60-cde698ccd197/
+2021-04-20 17:13:45,559 [INFO] blog details of '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-20 17:18:16,828 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\mixin.py changed, reloading.
+2021-04-20 17:18:22,223 [INFO] blog details of '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-20 17:18:47,644 [INFO] blog details of '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-20 17:19:50,163 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\mixin.py changed, reloading.
+2021-04-20 17:34:33,402 [INFO] blog details of '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-20 17:34:53,257 [WARNING] Bad Request: /blogs/e3673499-cedc-468d-b45e-f6d083c7dc2a/all_activity/
+2021-04-20 17:35:17,059 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-20 17:35:50,913 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-20 17:35:59,460 [WARNING] Bad Request: /blogs/e3673499-cedc-468d-b45e-f6d083c7dc2a/all_activity/
+2021-04-20 17:37:16,886 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-20 17:37:51,039 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-20 17:38:25,123 [INFO] disliked on blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-20 17:38:32,583 [INFO] liked on blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-20 18:25:30,831 [INFO] all likes of blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-20 18:30:06,394 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-20 18:35:03,497 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-20 18:35:18,835 [INFO] all likes of blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-20 18:35:31,227 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-20 18:35:34,802 [INFO] all likes of blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-20 18:40:11,474 [INFO] all likes of blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-20 18:41:32,310 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-20 18:44:24,839 [INFO] list of blogs for the user 'e3673499-cedc-468d-b45e-f6d083c7dc2a'
+2021-04-20 18:47:42,378 [WARNING] Not Found: /admin/main/
+2021-04-20 18:47:43,409 [WARNING] Not Found: /favicon.ico
+2021-04-20 18:47:48,993 [WARNING] Not Found: /admin/main/
+2021-04-21 10:44:09,297 [WARNING] Bad Request: /blogs/e3673499-cedc-468d-b45e-f6d083c7dc2a/all_activity/
+2021-04-21 10:44:22,639 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-21 10:44:36,869 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-21 11:06:28,063 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\authentication\serializers.py changed, reloading.
+2021-04-21 11:07:37,468 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\serializers.py changed, reloading.
+2021-04-21 11:08:48,848 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-21 11:09:17,802 [INFO] all likes of blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-21 11:09:17,830 [WARNING] Bad Request: /blogs/3b97bb92-be6e-4653-af60-cde698ccd197/get_all_likes/
+2021-04-21 11:09:36,979 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-21 11:10:43,634 [INFO] all likes of blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-21 11:11:57,346 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-21 11:13:13,928 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\serializers.py changed, reloading.
+2021-04-21 11:13:57,456 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\serializers.py changed, reloading.
+2021-04-21 11:14:22,715 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\serializers.py changed, reloading.
+2021-04-21 11:15:41,671 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\serializers.py changed, reloading.
+2021-04-21 11:16:19,510 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-21 11:18:15,830 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\authentication\serializers.py changed, reloading.
+2021-04-21 11:19:11,578 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\serializers.py changed, reloading.
+2021-04-21 11:19:34,178 [INFO] all likes of blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-21 11:20:20,427 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\serializers.py changed, reloading.
+2021-04-21 11:20:35,729 [INFO] all likes of blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-21 11:20:57,141 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\authentication\serializers.py changed, reloading.
+2021-04-21 11:21:02,759 [INFO] all likes of blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-21 11:21:23,761 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\serializers.py changed, reloading.
+2021-04-21 11:21:46,463 [INFO] all likes of blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-21 11:26:26,718 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\views.py changed, reloading.
+2021-04-21 11:27:31,103 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\mixin.py changed, reloading.
+2021-04-21 11:28:13,397 [WARNING] Bad Request: /blogs/3b97bb92-be6e-4653-af60-cde698ccd197/comment/
+2021-04-21 11:30:32,587 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-21 11:30:37,089 [WARNING] Bad Request: /blogs/3b97bb92-be6e-4653-af60-cde698ccd197/comment/
+2021-04-21 11:31:56,036 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\mixin.py changed, reloading.
+2021-04-21 11:32:00,122 [WARNING] Bad Request: /blogs/3b97bb92-be6e-4653-af60-cde698ccd197/comment/
+2021-04-21 11:32:22,415 [WARNING] Bad Request: /blogs/3b97bb92-be6e-4653-af60-cde698ccd197/comment/
+2021-04-21 11:32:33,961 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\mixin.py changed, reloading.
+2021-04-21 11:33:03,852 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\mixin.py changed, reloading.
+2021-04-21 11:33:21,418 [WARNING] Bad Request: /blogs/3b97bb92-be6e-4653-af60-cde698ccd197/comment/
+2021-04-21 11:34:37,969 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\mixin.py changed, reloading.
+2021-04-21 11:34:53,021 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\views.py changed, reloading.
+2021-04-21 11:36:51,557 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\authentication\serializers.py changed, reloading.
+2021-04-21 11:37:04,373 [WARNING] Forbidden (CSRF cookie not set.): /blogs/3b97bb92-be6e-4653-af60-cde698ccd197/get_all_likes
+2021-04-21 11:37:11,572 [INFO] all likes of blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-21 11:37:53,706 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-21 11:38:31,781 [INFO] all comments of blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-21 11:38:37,436 [INFO] all comments of blog with uid = '3b97bb92-be6e-4653-af60cde698ccd197'
+2021-04-21 11:38:42,050 [WARNING] Bad Request: /blogs/3b97bb92-be6e-4653-af60cde97/get_all_comments/
+2021-04-21 11:39:03,561 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-21 11:40:37,555 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-21 11:42:04,884 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-21 11:43:08,781 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\mixin.py changed, reloading.
