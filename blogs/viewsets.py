@@ -88,9 +88,10 @@ class CrudViewset(PaginationHandlerMixin, BaseFilterMixin, TagMixin):
         })
 
     def delete(self, request, pk):
-        self.model_class.objects.get(uid = pk).delete()
-        logging.info("blog deleted with uid '%s'", str(pk))
+        blog = self.model_class.objects.get(uid = pk)
         obj = Activity.objects.create(blog = blog, user = request.user, msg = "Blog deleted")
+        blog.delete()
+        logging.info("blog deleted with uid '%s'", str(pk))
         return Response({
             'status': True,
             'message': 'Delete Successful',
@@ -103,7 +104,7 @@ class CrudViewset(PaginationHandlerMixin, BaseFilterMixin, TagMixin):
             url_name="tags_search")
     def tags_search(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.model_class.objects.filter(user = request.user))
-        queryset = queryset.filter(tags__name = kwargs.pop('tag'))
+        queryset = queryset.filter(tags__name = kwargs['tag'])
         serializer = self.serializer_class(queryset, many=True)
         logging.info("Tag search with tag '%s'", str(kwargs.pop('tag')))
         return Response(serializer.data)

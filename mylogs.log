@@ -87,3 +87,209 @@
 2021-04-21 11:40:37,555 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
 2021-04-21 11:42:04,884 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
 2021-04-21 11:43:08,781 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\mixin.py changed, reloading.
+2021-04-21 13:59:00,704 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading2021-04-21 14:02:00,076 [INFO] all likes of blog with uid = '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-21 14:02:20,844 [INFO] blog details of '3b97bb92-be6e-4653-af60-cde698ccd197'
+2021-04-21 14:02:38,446 [INFO] list of blogs for the user 'e3673499-cedc-468d-b45e-f6d083c7dc2a'
+2021-04-21 14:02:46,502 [INFO] list of blogs for the user 'e3673499-cedc-468d-b45e-f6d083c7dc2a'
+2021-04-21 14:03:56,333 [INFO] list of blogs for the user 'e3673499-cedc-468d-b45e-f6d083c7dc2a'
+2021-04-21 14:04:06,163 [INFO] blog created with uid '08dfa694-363e-41a8-a20b-0812b4fb9f91'
+2021-04-21 14:04:59,191 [INFO] blog created with uid '5e32383b-6e36-447d-bd89-2ea961790d26'
+2021-04-21 14:05:48,502 [INFO] all likes of blog with uid = '5e32383b-6e36-447d-bd89-2ea961790d26'
+2021-04-21 14:06:00,784 [INFO] liked on blog with uid = '5e32383b-6e36-447d-bd89-2ea961790d26'
+2021-04-21 14:06:06,522 [INFO] all likes of blog with uid = '5e32383b-6e36-447d-bd89-2ea961790d26'
+2021-04-21 14:06:32,967 [ERROR] Internal Server Error: /blogs/tags/python/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py", line 109, in tags_search
+    logging.info("Tag search with tag '%s'", str(kwargs.pop('tag')))
+KeyError: 'tag'
+2021-04-21 14:06:38,764 [WARNING] Not Found: /blogs/tag/python/
+2021-04-21 14:07:19,872 [ERROR] Internal Server Error: /blogs/tags/python/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py", line 109, in tags_search
+    logging.info("Tag search with tag '%s'", str(kwargs.pop('tag')))
+KeyError: 'tag'
+2021-04-21 14:07:50,058 [WARNING] Not Found: /blogs/tags_search/python/
+2021-04-21 14:08:13,332 [WARNING] Not Found: /blogs/python/tags_search
+2021-04-21 14:08:14,920 [WARNING] Not Found: /blogs/python/tags_search/
+2021-04-21 14:08:28,476 [ERROR] Internal Server Error: /blogs/tags/python/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py", line 109, in tags_search
+    logging.info("Tag search with tag '%s'", str(kwargs.pop('tag')))
+KeyError: 'tag'
+2021-04-21 14:08:34,439 [WARNING] Not Found: /blogs/tags/python
+2021-04-21 14:08:36,795 [ERROR] Internal Server Error: /blogs/tags/python/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py", line 109, in tags_search
+    logging.info("Tag search with tag '%s'", str(kwargs.pop('tag')))
+KeyError: 'tag'
+2021-04-21 14:09:31,830 [INFO] list of blogs for the user 'e3673499-cedc-468d-b45e-f6d083c7dc2a'
+2021-04-21 14:09:41,254 [WARNING] Not Found: /blogs/tags/python
+2021-04-21 14:09:43,163 [ERROR] Internal Server Error: /blogs/tags/python/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py", line 109, in tags_search
+    logging.info("Tag search with tag '%s'", str(kwargs.pop('tag')))
+KeyError: 'tag'
+2021-04-21 14:09:59,206 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-21 14:11:32,235 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-21 14:11:37,655 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-21 14:11:44,959 [ERROR] Internal Server Error: /blogs/tags/python/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py", line 107, in tags_search
+    queryset = queryset.filter(tags__name = kwargs('tag'))
+TypeError: 'dict' object is not callable
+2021-04-21 14:11:52,965 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-21 14:12:36,370 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py changed, reloading.
+2021-04-21 14:12:41,456 [INFO] Tag search with tag 'python'
+2021-04-21 14:13:15,107 [INFO] Tag search with tag 'python'
+2021-04-21 14:15:41,974 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\serializers.py changed, reloading.
+2021-04-21 14:16:34,870 [WARNING] Method Not Allowed: /blogs/e3673499-cedc-468d-b45e-f6d083c7dc2a/
+2021-04-21 14:16:40,789 [ERROR] Internal Server Error: /blogs/e3673499-cedc-468d-b45e-f6d083c7dc2a/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\Django_User_Authentication\blogs\viewsets.py", line 69, in update
+    blog = self.model_class.objects.get(uid = pk)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 417, in get
+    self.model._meta.object_name
+blogs.models.Blogs.DoesNotExist: Blogs matching query does not exist.
+2021-04-21 14:18:19,581 [WARNING] Forbidden (CSRF cookie not set.): /blogs/tags_search/python/
+2021-04-21 14:18:25,036 [WARNING] Method Not Allowed: /blogs/tags/python/
+2021-04-21 14:18:28,717 [INFO] Tag search with tag 'python'
+2021-04-21 14:29:47,048 [INFO] list of blogs for the user 'e3673499-cedc-468d-b45e-f6d083c7dc2a'
+2021-04-21 14:29:58,722 [INFO] list of blogs for the user 'e3673499-cedc-468d-b45e-f6d083c7dc2a'
+2021-04-21 14:30:21,667 [INFO] list of blogs for the user 'e3673499-cedc-468d-b45e-f6d083c7dc2a'
+2021-04-21 14:31:13,748 [INFO] blog created with uid '7bbd68cd-9b04-42e7-94c7-cdbb72ae9212'
+2021-04-21 14:31:46,680 [WARNING] Method Not Allowed: /blogs/
+2021-04-21 14:34:36,786 [INFO] list of blogs for the user 'e3673499-cedc-468d-b45e-f6d083c7dc2a'
+2021-04-21 14:37:15,523 [INFO] blog created with uid '6dfbea37-b6ce-4a05-bb2c-255041722d04'
+2021-04-21 14:37:56,979 [INFO] blog updated with uid '6dfbea37-b6ce-4a05-bb2c-255041722d04'
+2021-04-21 14:38:40,793 [INFO] all likes of blog with uid = '6dfbea37-b6ce-4a05-bb2c-255041722d04'
+2021-04-21 14:38:50,124 [INFO] liked on blog with uid = '6dfbea37-b6ce-4a05-bb2c-255041722d04'
+2021-04-21 14:38:55,840 [INFO] all likes of blog with uid = '6dfbea37-b6ce-4a05-bb2c-255041722d04'
+2021-04-21 14:40:04,144 [INFO] Tag search with tag 'ios'

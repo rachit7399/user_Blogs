@@ -3,20 +3,6 @@ from rest_framework.serializers import FileField
 from .models import *
 from authentication.serializers import UserLikedSerializer
 
-class ActivitySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Activity
-        fields = '__all__'
-        
-    def validate(self, attrs):
-        return attrs
-
-class UploadSerializer(serializers.ModelSerializer):
-    file_uploaded = FileField()
-    class Meta:
-        fields = ['file_uploaded']
-        
-
 class TagsBlogSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tags
@@ -34,6 +20,22 @@ class CreateBlogSerializer(serializers.ModelSerializer):
         
     def validate(self, attrs):
         return attrs
+
+class ActivitySerializer(serializers.ModelSerializer):
+    user = UserLikedSerializer()
+    blog = CreateBlogSerializer()
+
+    class Meta:
+        model = Activity
+        fields = '__all__'
+        
+    def validate(self, attrs):
+        return attrs
+
+class UploadSerializer(serializers.ModelSerializer):
+    file_uploaded = FileField()
+    class Meta:
+        fields = ['file_uploaded']
 
 
 class CommentSerializer(serializers.ModelSerializer):
