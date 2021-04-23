@@ -7,8 +7,8 @@ from rest_framework.decorators import action
 from rest_framework import serializers, status
 from rest_framework.pagination import PageNumberPagination
 from django.contrib.sites.shortcuts import get_current_site
-from .mixin import LikeCommentMixin, PaginationHandlerMixin, BaseFilterMixin, TagMixin
-from .serializers import CommentSerializer, LikeSerializer, ActivitySerializer, ALLLikeSerializer
+from .mixin import LikeCommentMixin, PaginationHandlerMixin, BaseFilterMixin, TagMixin, GenMixin
+from .serializers import CommentSerializer, LikeSerializer, ActivitySerializer, ALLLikeSerializer, TagsBlogSerializer, LeaderboardSerializer
 import logging
 
 logging.basicConfig(
@@ -21,7 +21,7 @@ logging.basicConfig(
     )
 
 
-class CrudViewset(PaginationHandlerMixin, BaseFilterMixin, TagMixin):
+class CrudViewset(PaginationHandlerMixin, BaseFilterMixin, TagMixin, GenMixin):
     pagination_class    = PageNumberPagination  
     def list(self, request):
         queryset = self.search_tag(request, self.filter_queryset(self.model_class.objects.filter(user = request.user) ))
@@ -130,6 +130,41 @@ class CrudViewset(PaginationHandlerMixin, BaseFilterMixin, TagMixin):
                 'message': 'All Activity',
                 'data': serializer.data
             })
+        except Exception:
+            return Response({"Failed"}, status.HTTP_400_BAD_REQUEST)
+
+    @action(methods=["GET"],detail=False,url_path="learderboard/all",url_name="learderboard")
+    def learderboard(self, request, *args, **kwargs):
+        try:
+            sort = request.query_params.get("sort", "likes")
+            s1 = request.query_params.get("s1", None)
+            s2 = request.query_params.get("s2", None)
+            _data = []
+
+            if(sort == "tags"):
+                self.serializer_class = TagsBlogSerializer
+                _data = self.sort_for_leaderboard_tags()
+
+            else:
+                if(s1 == None or s2 == None):
+                    qs = self.model_class.objects.all()
+                else:
+                    qs = self.model_class.objects.filter(created_at__range=[s1, s2])
+                _data = LeaderboardSerializer(qs, many = True).data
+                if(sort == "likes"):
+                    _data = sorted(_data, key = lambda i: i['likes_count'],reverse=True)
+                elif(sort == "comments"):
+                    _data = sorted(_data, key = lambda i: i['comments_count'],reverse=True)
+                else:
+                    _data = "Wrong sorting filter"
+                
+            
+            return Response({
+                'status': True,
+                'message': 'learderboard',
+                'data': _data
+            })
+            
         except Exception:
             return Response({"Failed"}, status.HTTP_400_BAD_REQUEST)
 

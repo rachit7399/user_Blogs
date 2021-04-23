@@ -17,7 +17,7 @@ class Blogs(BaseModel):
 
     title = models.CharField(max_length=255, null=True, blank=True)
     media = models.FileField(blank=True, null=True, upload_to='doc/')
-    tags = models.ManyToManyField(Tags)
+    tags = models.ManyToManyField(Tags, related_name="blogs_tags")
     content = models.TextField()
                          
 
@@ -26,7 +26,7 @@ class Comments(BaseModel):
     
     blog = models.ForeignKey(Blogs,
                              on_delete=models.CASCADE,
-                             related_name="Comment_blogs")    
+                             related_name="comment_blogs")    
     user = models.ForeignKey(User,
                              on_delete=models.CASCADE,
                              related_name="comment_user")

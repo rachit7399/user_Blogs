@@ -1,7 +1,8 @@
 from rest_framework import filters
 from rest_framework.response import Response
-from .models import  Tags, Likes, Activity
+from .models import  Blogs, Tags, Likes, Activity
 import logging
+import operator
 
 
 class PaginationHandlerMixin(object):
@@ -89,7 +90,7 @@ class LikeCommentMixin:
 
 
 
-class TagMixin():
+class TagMixin:
 
     def get_tags_list(self, lst_with_tag_name):
         lst_with_tag_uid = []
@@ -110,3 +111,24 @@ class TagMixin():
             blog.tags.add(tag)
         blog.save()
 
+
+class GenMixin:
+    def get_dct_with_tagsand_count(self):
+        dct = {}
+        qs = Tags.objects.all()
+        for i in qs:
+            dct[i] = Blogs.objects.filter(tags__name = i.name).count()
+        return dct
+
+    def sort_for_leaderboard_tags(self):
+        dct_with_tagsand_count = self.get_dct_with_tagsand_count()
+        dct_with_tagsand_count_sorted = dict( sorted(dct_with_tagsand_count.items(), key=operator.itemgetter(1),reverse=True))
+        _data = []
+        rank = 1
+        for tag_obj in dct_with_tagsand_count_sorted:
+            serializer_data = self.serializer_class(tag_obj).data
+            serializer_data["count"] = dct_with_tagsand_count_sorted[tag_obj]
+            serializer_data["rank"] = rank
+            _data.append(serializer_data)
+            rank += 1
+        return _data

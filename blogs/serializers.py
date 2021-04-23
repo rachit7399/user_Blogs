@@ -65,3 +65,18 @@ class ALLLikeSerializer(serializers.ModelSerializer):
         
     def validate(self, attrs):
         return attrs
+
+class LeaderboardSerializer(serializers.ModelSerializer):
+    likes_count = serializers.SerializerMethodField()
+    comments_count = serializers.SerializerMethodField()
+    tags = TagsBlogSerializer(read_only = True, many = True)
+    class Meta:
+        model = Blogs
+        fields = "__all__"
+        # fields = ["uid", "title", "media", "content", "user" ,"likes_count", "comments_count"]
+        
+    def get_likes_count(self, blog_obj):
+        return blog_obj.like_blogs.all().count()
+
+    def get_comments_count(self, blog_obj):
+        return blog_obj.comment_blogs.all().count()
