@@ -572,3 +572,394 @@ TypeError: keys must be str, int, float, bool or None, not UUID
 2021-04-23 16:24:45,347 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\mixin.py changed, reloading.
 2021-04-23 16:24:55,862 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
 2021-04-23 16:27:02,626 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 10:59:22,784 [WARNING] Not Found: /blogs/get_csv
+2021-04-26 10:59:27,377 [ERROR] Internal Server Error: /blogs/get_csv/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\fields\__init__.py", line 2313, in to_python
+    return uuid.UUID(**{input_form: value})
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\uuid.py", line 160, in __init__
+    raise ValueError('badly formed hexadecimal UUID string')
+ValueError: badly formed hexadecimal UUID string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py", line 40, in retrieve
+    blog = get_object_or_404(queryset, pk=pk)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 404, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1354, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1385, in _add_q
+    check_filterable=check_filterable,
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1315, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1169, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\lookups.py", line 72, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\fields\__init__.py", line 2297, in get_prep_value
+    return self.to_python(value)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\fields\__init__.py", line 2318, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“get_csv” is not a valid UUID.']
+2021-04-26 11:11:00,583 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 11:11:06,816 [WARNING] Not Found: /blogs/get_csv/details/
+2021-04-26 11:11:39,932 [WARNING] Not Found: /get_csv/details/
+2021-04-26 11:12:04,376 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 11:12:16,252 [WARNING] Not Found: /blogs/get_csv/details/
+2021-04-26 11:12:22,489 [WARNING] Not Found: /blogs/5
+2021-04-26 11:12:34,995 [WARNING] Not Found: /blogs/get_csv/details
+2021-04-26 11:12:36,481 [WARNING] Not Found: /favicon.ico
+2021-04-26 11:12:45,634 [WARNING] Not Found: /blogs/details
+2021-04-26 11:12:49,341 [ERROR] Internal Server Error: /blogs/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\fields\__init__.py", line 2313, in to_python
+    return uuid.UUID(**{input_form: value})
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\uuid.py", line 157, in __init__
+    hex = hex.replace('urn:', '').replace('uuid:', '')
+AttributeError: 'AnonymousUser' object has no attribute 'replace'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py", line 29, in list
+    queryset = self.search_tag(request, self.filter_queryset(self.model_class.objects.filter(user = request.user) ))
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1354, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1385, in _add_q
+    check_filterable=check_filterable,
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1315, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1169, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\fields\related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\fields\__init__.py", line 2297, in get_prep_value
+    return self.to_python(value)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\fields\__init__.py", line 2318, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“AnonymousUser” is not a valid UUID.']
+2021-04-26 11:13:02,654 [WARNING] Not Found: /admin
+2021-04-26 11:13:06,185 [WARNING] Not Found: /ab
+2021-04-26 11:13:38,666 [WARNING] Not Found: /blogs/get_csv
+2021-04-26 11:13:45,512 [ERROR] Internal Server Error: /blogs/get_csv/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\fields\__init__.py", line 2313, in to_python
+    return uuid.UUID(**{input_form: value})
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\uuid.py", line 160, in __init__
+    raise ValueError('badly formed hexadecimal UUID string')
+ValueError: badly formed hexadecimal UUID string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py", line 40, in retrieve
+    blog = get_object_or_404(queryset, pk=pk)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 404, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1354, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1385, in _add_q
+    check_filterable=check_filterable,
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1315, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1169, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\lookups.py", line 72, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\fields\__init__.py", line 2297, in get_prep_value
+    return self.to_python(value)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\fields\__init__.py", line 2318, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“get_csv” is not a valid UUID.']
+2021-04-26 11:13:51,781 [WARNING] Not Found: /blogs/get_csv/details
+2021-04-26 11:14:09,213 [WARNING] Not Found: /blogs/get-blogs/all
+2021-04-26 11:14:12,749 [INFO] all blogs available
+2021-04-26 11:14:36,779 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 11:14:45,531 [WARNING] Not Found: /blogs/get-csv/details/
+2021-04-26 11:15:20,210 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 11:15:31,104 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\views.py changed, reloading.
+2021-04-26 11:15:44,768 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 11:15:47,828 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 11:16:01,946 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 11:18:47,398 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 11:19:03,446 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 11:20:52,677 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 11:24:50,447 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 11:25:23,145 [WARNING] Not Found: /blogs/get_csv/details
+2021-04-26 11:25:29,223 [WARNING] Not Found: /blogs/get_csv/details/
+2021-04-26 11:25:39,444 [ERROR] Internal Server Error: /blogs/get_csv/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\fields\__init__.py", line 2313, in to_python
+    return uuid.UUID(**{input_form: value})
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\uuid.py", line 157, in __init__
+    hex = hex.replace('urn:', '').replace('uuid:', '')
+AttributeError: 'AnonymousUser' object has no attribute 'replace'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py", line 39, in retrieve
+    queryset = self.filter_queryset(self.model_class.objects.filter(user = request.user) )
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1354, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1385, in _add_q
+    check_filterable=check_filterable,
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1315, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\sql\query.py", line 1169, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\fields\related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\fields\__init__.py", line 2297, in get_prep_value
+    return self.to_python(value)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\fields\__init__.py", line 2318, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“AnonymousUser” is not a valid UUID.']
+2021-04-26 11:25:49,980 [WARNING] Not Found: /blogs/get-csv/details
+2021-04-26 11:30:26,366 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 11:31:19,243 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 11:31:58,369 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 11:32:51,174 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 11:37:23,666 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 11:38:41,106 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 11:39:52,038 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 11:39:59,590 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 11:40:26,259 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 11:42:39,511 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 11:44:28,081 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 11:46:04,344 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 11:52:14,463 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 11:53:35,017 [WARNING] Not Found: /get-csv/details/
+2021-04-26 11:59:54,819 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 12:00:11,601 [WARNING] Not Found: /get-csv/details/
+2021-04-26 12:01:42,277 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 12:09:47,784 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 12:10:12,720 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 12:10:13,215 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 12:10:20,501 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 12:10:29,265 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 12:11:02,706 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 12:11:34,404 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 12:14:24,265 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 12:17:16,349 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 12:19:15,628 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 12:22:59,252 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 12:23:13,313 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 12:23:20,994 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 12:23:24,307 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 12:25:59,983 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 12:26:31,731 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 12:26:53,021 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 12:28:38,793 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 12:30:58,799 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 16:03:15,384 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:07:10,454 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:10:47,848 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:12:24,872 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:12:29,657 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:13:41,545 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:14:34,047 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:15:38,517 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:15:47,207 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 16:16:00,186 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 16:23:36,534 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:23:47,134 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 16:23:54,366 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 16:24:16,529 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:26:04,653 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:28:16,653 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:29:28,482 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 16:30:15,442 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 16:30:22,312 [ERROR] Internal Server Error: /blogs/get-csv/details/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 426, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'rest_framework.utils.serializer_helpers.ReturnList'>`
+2021-04-26 16:30:26,862 [ERROR] Internal Server Error: /blogs/get-csv/details/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 426, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'rest_framework.utils.serializer_helpers.ReturnList'>`
+2021-04-26 16:30:49,862 [ERROR] Internal Server Error: /blogs/get-csv/details/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 426, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'rest_framework.utils.serializer_helpers.ReturnList'>`
+2021-04-26 16:31:05,402 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 16:31:12,132 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 16:31:55,662 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 16:32:02,541 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 16:32:25,372 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 16:32:31,241 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 16:32:43,944 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 16:33:41,557 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 16:33:46,785 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 16:33:57,203 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 16:33:59,315 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 16:34:08,556 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 16:34:29,751 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 16:35:57,411 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-26 16:36:12,426 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:37:10,390 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:39:50,704 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:41:39,686 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:41:57,449 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 16:42:50,544 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:47:18,316 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:47:25,957 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 16:53:54,225 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:54:27,240 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 16:54:48,495 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 16:55:14,708 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 17:02:01,652 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 17:03:03,632 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 17:05:46,081 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 17:06:05,725 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 17:19:15,272 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 17:31:01,323 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 17:31:07,682 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 17:31:24,622 [WARNING] Bad Request: /blogs/get-csv/details/
+2021-04-26 17:32:19,602 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-26 17:36:10,330 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.

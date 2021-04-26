@@ -80,3 +80,38 @@ class LeaderboardSerializer(serializers.ModelSerializer):
 
     def get_comments_count(self, blog_obj):
         return blog_obj.comment_blogs.all().count()
+
+class CSVBlogSerializer(serializers.ModelSerializer):
+    tags = serializers.SerializerMethodField()
+    likes_count = serializers.SerializerMethodField()
+    comments_count = serializers.SerializerMethodField()
+    user_comments = serializers.SerializerMethodField()
+    user_liked = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Blogs
+        fields = ["created_at", "uid", "title", "content", "tags", "likes_count", "user_liked", "comments_count", "user_comments"]
+        
+    def get_likes_count(self, blog_obj):
+        return blog_obj.like_blogs.all().count()
+
+    def get_comments_count(self, blog_obj):
+        return blog_obj.comment_blogs.all().count()
+    
+    def get_user_comments(self, blog_obj):
+        list_of_comment = []
+        for comm_obj in blog_obj.comment_blogs.all():
+            list_of_comment.append(comm_obj.created_at.strftime("%d/%m/%Y %H:%M:%S") +" "+ comm_obj.user.first_name +" -> "+ comm_obj.comment)
+        return ", ".join(list_of_comment)
+
+    def get_user_liked(self, blog_obj):
+        list_of_likes = []
+        for like_obj in blog_obj.like_blogs.all():
+            list_of_likes.append(like_obj.created_at.strftime("%d/%m/%Y %H:%M:%S") +" "+ like_obj.user.first_name +" "+ like_obj.user.last_name)
+        return ", ".join(list_of_likes)
+
+    def get_tags(self, blog_obj):
+        list_of_tags = []
+        for tag_obj in blog_obj.tags.all():
+            list_of_tags.append(tag_obj.name)
+        return ", ".join(list_of_tags)

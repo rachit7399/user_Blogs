@@ -1,6 +1,7 @@
 from rest_framework.exceptions import ValidationError
 from blogs.models import Comments, Likes
 from .models import Activity
+from datetime import datetime
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 from rest_framework.decorators import action
@@ -8,8 +9,10 @@ from rest_framework import serializers, status
 from rest_framework.pagination import PageNumberPagination
 from django.contrib.sites.shortcuts import get_current_site
 from .mixin import LikeCommentMixin, PaginationHandlerMixin, BaseFilterMixin, TagMixin, GenMixin
-from .serializers import CommentSerializer, LikeSerializer, ActivitySerializer, ALLLikeSerializer, TagsBlogSerializer, LeaderboardSerializer
+from .serializers import CommentSerializer, LikeSerializer, ActivitySerializer, ALLLikeSerializer, TagsBlogSerializer, LeaderboardSerializer, CSVBlogSerializer
 import logging
+from django.http import HttpResponse
+import csv
 
 logging.basicConfig(
     level=logging.INFO,
@@ -170,7 +173,6 @@ class CrudViewset(PaginationHandlerMixin, BaseFilterMixin, TagMixin, GenMixin):
 
 
 
-
 class CommentViewset(LikeCommentMixin):
     @action(methods=["POST"], detail=True)
     def comment(self, request, *args, **kwargs):
@@ -282,4 +284,29 @@ class LikeViewset(LikeCommentMixin):
         except Exception:
             return Response({"Failed"}, status.HTTP_400_BAD_REQUEST)
 
+class FeaturesViewset:
+    @action(methods=["GET"],detail=False,url_path="get-csv/details",url_name="get_csv")
+    def get_csv(self, request, *args, **kwargs):
+        try:
+            self.serializer_class = CSVBlogSerializer
+            s1 = request.query_params.get("s1", None)
+            s2 = request.query_params.get("s2", None)
+            if(s1 == None or s2 == None):
+                qs = self.model_class.objects.all()
+            else:
+                qs = self.model_class.objects.filter(created_at__range=[s1, s2])
+    
+            response = HttpResponse(content_type='text/csv')
+            file_name = "blogs details " + str(datetime.now()) + ".csv"
+            response['Content-Disposition'] = 'attachment; filename= {}'.format(file_name)
+            serializer = self.serializer_class(qs, many = True)
+            header = self.serializer_class.Meta.fields   
+            writer = csv.DictWriter(response, fieldnames=header)
+            writer.writeheader()
+            for row in serializer.data:
+                writer.writerow(row)
+            return response 
+
+        except Exception:
+            return Response({"Failed"}, status.HTTP_400_BAD_REQUEST)
 
