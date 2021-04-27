@@ -963,3 +963,203 @@ AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse`
 2021-04-26 17:31:24,622 [WARNING] Bad Request: /blogs/get-csv/details/
 2021-04-26 17:32:19,602 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
 2021-04-26 17:36:10,330 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-27 10:43:12,903 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 10:43:24,104 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 10:43:31,850 [INFO] all blogs available
+2021-04-27 10:44:58,553 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 10:45:12,048 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\views.py changed, reloading.
+2021-04-27 10:46:24,188 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 10:47:11,107 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-27 10:47:49,632 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\views.py changed, reloading.
+2021-04-27 10:47:53,858 [INFO] all blogs available
+2021-04-27 10:52:50,766 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\views.py changed, reloading.
+2021-04-27 10:53:53,131 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 10:53:58,970 [WARNING] Bad Request: /blogs/get_csv/
+2021-04-27 10:54:16,520 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 10:59:08,370 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 11:02:21,908 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\views.py changed, reloading.
+2021-04-27 11:03:00,902 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\views.py changed, reloading.
+2021-04-27 11:07:21,687 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\views.py changed, reloading.
+2021-04-27 11:07:36,321 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 11:07:45,655 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\views.py changed, reloading.
+2021-04-27 11:08:22,396 [WARNING] Bad Request: /blogs/get_csv/
+2021-04-27 11:19:25,107 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\views.py changed, reloading.
+2021-04-27 11:20:47,797 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\views.py changed, reloading.
+2021-04-27 11:20:56,727 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\views.py changed, reloading.
+2021-04-27 11:22:25,756 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\mixin.py changed, reloading.
+2021-04-27 11:42:30,400 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 11:46:49,399 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 11:47:20,266 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\views.py changed, reloading.
+2021-04-27 11:48:10,297 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 11:49:47,152 [INFO] all blogs available
+2021-04-27 11:49:50,397 [ERROR] Internal Server Error: /blogs/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 66, in get_queryset
+    % self.__class__.__name__
+AssertionError: 'CreateBlogViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+2021-04-27 11:51:17,638 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\views.py changed, reloading.
+2021-04-27 12:19:58,028 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 13:45:54,821 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 13:46:30,673 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 13:47:40,043 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 13:53:00,857 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-27 13:53:05,653 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\views.py changed, reloading.
+2021-04-27 13:54:15,624 [ERROR] Internal Server Error: /blogs/get_csv_like/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py", line 176, in get_csv_like
+    return self.csv_details(request, "like details")
+AttributeError: 'CreateBlogViewSet' object has no attribute 'csv_details'
+2021-04-27 13:55:39,906 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\mixin.py changed, reloading.
+2021-04-27 13:55:46,161 [ERROR] Internal Server Error: /blogs/get_csv_like/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py", line 176, in get_csv_like
+    return self.csv_details(request, "like details")
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\mixin.py", line 152, in csv_details
+    header = self.get_serializer.Meta.fields
+AttributeError: 'function' object has no attribute 'Meta'
+2021-04-27 13:56:02,019 [ERROR] Internal Server Error: /blogs/get_csv_all/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py", line 172, in get_csv_all
+    return self.csv_details(request, "blogs details")
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\mixin.py", line 152, in csv_details
+    header = self.get_serializer.Meta.fields
+AttributeError: 'function' object has no attribute 'Meta'
+2021-04-27 15:47:55,008 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\mixin.py changed, reloading.
+2021-04-27 15:50:25,348 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-27 15:51:06,993 [ERROR] Internal Server Error: /blogs/get_csv_all/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py", line 172, in get_csv_all
+    return self.csv_details(request, "blogs details")
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\mixin.py", line 142, in csv_details
+    s1 = request.query_params.get("s1", None)
+AttributeError: 'function' object has no attribute 'Meta'
+2021-04-27 15:54:46,473 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 15:58:56,147 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\views.py changed, reloading.
+2021-04-27 15:59:08,053 [ERROR] Internal Server Error: /blogs/get_csv_all/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py", line 173, in get_csv_all
+    return self.csv_details(request, "blogs details")
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\mixin.py", line 142, in csv_details
+    s1 = request.query_params.get("s1", None)
+AttributeError: 'function' object has no attribute 'Meta'
+2021-04-27 15:59:23,132 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\mixin.py changed, reloading.
+2021-04-27 16:00:14,587 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\mixin.py changed, reloading.
+2021-04-27 16:00:26,407 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-27 16:00:37,007 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 16:01:12,956 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\views.py changed, reloading.
+2021-04-27 16:03:59,806 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-27 16:04:31,032 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\serializers.py changed, reloading.
+2021-04-27 16:07:13,095 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 16:07:31,605 [WARNING] Not Found: /blogs/get_csv_comment/
+2021-04-27 16:07:54,240 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-27 16:08:20,545 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\mixin.py changed, reloading.

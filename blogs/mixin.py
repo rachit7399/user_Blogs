@@ -1,8 +1,12 @@
 from rest_framework import filters
 from rest_framework.response import Response
 from .models import  Blogs, Tags, Likes, Activity
+from .serializers import TagsBlogSerializer
 import logging
 import operator
+from django.http import HttpResponse
+from datetime import datetime
+import csv
 
 
 class PaginationHandlerMixin(object):
@@ -43,7 +47,7 @@ class LikeCommentMixin:
     def comment_function(self, request, msg, *args, **kwargs):
         blog_id = kwargs.pop('pk')
         blog = self.model_class.objects.get(uid = blog_id)
-        serializer = self.serializer_class(data={
+        serializer = self.get_serializer(data={
             **{
                 "comment": request.data["comment"],
                 "user": request.user.uid,
@@ -71,7 +75,7 @@ class LikeCommentMixin:
             obj = Activity.objects.create(blog = blog, user = request.user, msg = "Disliked")  
             logging.info("disliked on blog with uid = '%s'", str(blog.uid)) 
         else:
-            serializer = self.serializer_class(data={
+            serializer = self.get_serializer(data={
                 **{
                     "user": request.user.uid,
                     "blog" : blog.uid
@@ -126,9 +130,28 @@ class GenMixin:
         _data = []
         rank = 1
         for tag_obj in dct_with_tagsand_count_sorted:
-            serializer_data = self.serializer_class(tag_obj).data
+            serializer_data = TagsBlogSerializer(tag_obj).data
             serializer_data["count"] = dct_with_tagsand_count_sorted[tag_obj]
             serializer_data["rank"] = rank
             _data.append(serializer_data)
             rank += 1
         return _data
+    
+    def csv_details(self, request, fname):
+        s1 = request.query_params.get("s1", None)
+        s2 = request.query_params.get("s2", None)
+        if(s1 == None or s2 == None):
+            qs = self.model_class.objects.all()
+        else:
+            qs = self.model_class.objects.filter(created_at__range=[s1, s2])
+
+        response = HttpResponse(content_type='text/csv')
+        file_name = fname + str(datetime.now()) + ".csv"
+        response['Content-Disposition'] = 'attachment; filename= {}'.format(file_name)
+        serializer = self.get_serializer(qs, many = True)
+        header = self.get_serializer().Meta.fields   
+        writer = csv.DictWriter(response, fieldnames=header)
+        writer.writeheader()
+        for row in serializer.data:
+            writer.writerow(row)
+        return response
