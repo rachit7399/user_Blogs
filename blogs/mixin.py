@@ -50,7 +50,7 @@ class LikeCommentMixin:
         serializer = self.get_serializer(data={
             **{
                 "comment": request.data["comment"],
-                "user": request.user.uid,
+                "user": blog.user.uid,
                 "blog" : blog.uid
             }
         })   
@@ -58,7 +58,8 @@ class LikeCommentMixin:
         serializer.save()   
         logging.info("commented on blog with uid = '%s'", str(blog.uid)) 
         msg = "comented : " + str(request.data["comment"])
-        obj = Activity.objects.create(blog = blog, user = request.user, msg = msg)  
+        # msg = f"commented: {str(request.data['comment'])}"
+        obj = Activity.objects.create(blog = blog, user = blog.user, msg = msg)  
         return Response({
             'status': True,
             'message': msg,
@@ -72,19 +73,19 @@ class LikeCommentMixin:
             Likes.objects.filter(blog__uid = blog_id).delete()
             msg = "Disliked Successfull"
             _data = []
-            obj = Activity.objects.create(blog = blog, user = request.user, msg = "Disliked")  
+            obj = Activity.objects.create(blog = blog, user = blog.user, msg = "Disliked")  
             logging.info("disliked on blog with uid = '%s'", str(blog.uid)) 
         else:
             serializer = self.get_serializer(data={
                 **{
-                    "user": request.user.uid,
+                    "user": blog.user.uid,
                     "blog" : blog.uid
                 }
             })   
             serializer.is_valid(raise_exception=True)   
             serializer.save() 
             _data = serializer.data  
-            obj = Activity.objects.create(blog = blog, user = request.user, msg = "liked")  
+            obj = Activity.objects.create(blog = blog, user = blog.user, msg = "liked")  
             logging.info("liked on blog with uid = '%s'", str(blog.uid))  
         return Response({
             'status': True,

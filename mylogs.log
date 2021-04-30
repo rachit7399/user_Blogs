@@ -1163,3 +1163,269 @@ AttributeError: 'function' object has no attribute 'Meta'
 2021-04-27 16:07:31,605 [WARNING] Not Found: /blogs/get_csv_comment/
 2021-04-27 16:07:54,240 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
 2021-04-27 16:08:20,545 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\mixin.py changed, reloading.
+2021-04-28 18:26:38,883 [WARNING] Not Found: /convert/
+2021-04-28 18:27:01,868 [WARNING] Not Found: /convert/
+2021-04-28 18:27:39,219 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\user\urls.py changed, reloading.
+2021-04-28 18:27:48,856 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\urls.py changed, reloading.
+2021-04-28 18:27:59,603 [WARNING] Not Found: /convert/
+2021-04-28 18:28:19,068 [WARNING] Not Found: /convert/
+2021-04-28 18:28:21,999 [WARNING] Not Found: /convert/
+2021-04-28 18:28:22,795 [WARNING] Not Found: /convert/
+2021-04-28 18:28:44,587 [WARNING] Not Found: /convert/
+2021-04-28 18:28:47,478 [WARNING] Not Found: /convert
+2021-04-28 18:29:06,710 [WARNING] Not Found: /favicon.ico
+2021-04-28 18:29:16,100 [WARNING] Method Not Allowed: /auth/login/
+2021-04-28 18:29:18,964 [WARNING] Not Found: /auth/
+2021-04-28 18:29:22,707 [WARNING] Not Found: /auth
+2021-04-28 18:29:40,315 [WARNING] Not Found: /follow/
+2021-04-28 18:29:48,103 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\user\urls.py changed, reloading.
+2021-04-28 18:29:51,023 [WARNING] Not Found: /follow/
+2021-04-28 18:29:58,114 [WARNING] Not Found: /
+2021-04-28 18:30:05,600 [WARNING] Not Found: /follow
+2021-04-28 18:30:16,469 [WARNING] Not Found: /convert/
+2021-04-28 18:30:51,547 [WARNING] Not Found: /convert/
+2021-04-28 18:31:12,044 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\urls.py changed, reloading.
+2021-04-28 18:31:15,634 [WARNING] Not Found: /convert/
+2021-04-28 18:31:23,483 [WARNING] Not Found: /convert/convert/
+2021-04-28 18:31:26,549 [WARNING] Not Found: /convert/convert
+2021-04-29 10:14:04,067 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\user\urls.py changed, reloading.
+2021-04-29 10:14:14,096 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\urls.py changed, reloading.
+2021-04-29 10:14:23,483 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\urls.py changed, reloading.
+2021-04-29 10:14:28,891 [ERROR] Internal Server Error: /convert/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\generics.py", line 66, in get_queryset
+    % self.__class__.__name__
+AssertionError: 'ConvertCurrViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+2021-04-29 10:14:53,067 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 10:15:03,520 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 10:22:11,246 [ERROR] Internal Server Error: /convert/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 426, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2021-04-29 10:24:29,506 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 10:24:44,433 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 10:26:56,872 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 10:27:40,368 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 10:28:09,671 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\urls.py changed, reloading.
+2021-04-29 10:28:19,297 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 10:28:25,262 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\urls.py changed, reloading.
+2021-04-29 10:46:10,644 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 10:46:16,261 [ERROR] Internal Server Error: /convert/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py", line 15, in get
+    msg = "your" + str(amount) + "will be " + _data["rates"][to] + "in" + to
+TypeError: can only concatenate str (not "float") to str
+2021-04-29 10:47:16,745 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 10:48:15,611 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 10:48:34,391 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 10:48:48,544 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 10:49:40,916 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 11:18:16,838 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 11:18:26,084 [WARNING] Bad Request: /convert/
+2021-04-29 11:19:05,518 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 11:19:56,365 [WARNING] Bad Request: /convert/
+2021-04-29 11:21:39,561 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 11:23:11,638 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 11:24:11,707 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 11:24:24,837 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 11:24:37,657 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 11:25:31,420 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 11:26:53,221 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 11:26:59,092 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 11:27:51,506 [WARNING] Bad Request: /convert/
+2021-04-29 11:28:43,607 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 11:29:51,819 [WARNING] Bad Request: /convert/
+2021-04-29 11:34:43,382 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 11:34:49,175 [WARNING] Bad Request: /convert/
+2021-04-29 11:41:57,375 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 11:42:33,660 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 11:44:46,451 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 11:44:54,235 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\convert\views.py changed, reloading.
+2021-04-29 18:07:26,645 [WARNING] Not Found: /apiblogs/
+2021-04-29 18:08:40,265 [WARNING] Not Found: /apiblogs/
+2021-04-29 18:09:52,375 [WARNING] Not Found: /api/blogs
+2021-04-30 10:14:55,113 [WARNING] Not Found: /api/blogs
+2021-04-30 10:16:23,333 [WARNING] Unsupported Media Type: /blogs/
+2021-04-30 10:16:44,583 [WARNING] Unsupported Media Type: /blogs/
+2021-04-30 10:31:03,154 [WARNING] Unsupported Media Type: /blogs/
+2021-04-30 10:36:26,359 [WARNING] Bad Request: /blogs/
+2021-04-30 10:37:13,484 [WARNING] Bad Request: /blogs/
+2021-04-30 11:00:13,956 [WARNING] Not Found: /blogs/c3e2713e-297f-4171-bc72-36203d9a9c9c/
+2021-04-30 12:28:24,151 [WARNING] Unauthorized: /blogs/c3e2713e-297f-4171-bc72-36203d9a9c9c/
+2021-04-30 12:29:00,066 [WARNING] Unauthorized: /blogs/
+2021-04-30 12:50:32,612 [WARNING] Unauthorized: /blogs/
+2021-04-30 12:50:47,732 [WARNING] Unauthorized: /blogs/
+2021-04-30 12:51:34,602 [WARNING] Unauthorized: /blogs/
+2021-04-30 12:52:04,472 [WARNING] Unauthorized: /blogs/
+2021-04-30 13:09:07,990 [WARNING] Bad Request: /blogs/
+2021-04-30 16:31:36,701 [WARNING] Unsupported Media Type: /blogs/6188be91-2044-4acb-b110-bb76968db3af/
+2021-04-30 16:32:22,036 [WARNING] Bad Request: /blogs/6188be91-2044-4acb-b110-bb76968db3af/
+2021-04-30 16:38:14,552 [WARNING] Not Found: /blogs/927ae806-a0f6-4249-87a8-09926f414b08/
+2021-04-30 16:39:11,786 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-30 16:39:20,574 [WARNING] Not Found: /blogs/7e80b7bb-d373-4635-a2de-6996c6a6e510/
+2021-04-30 16:39:34,854 [WARNING] Not Found: /blogs/197c0fda-29f1-4efa-a85a-553813f363c4
+2021-04-30 16:40:15,796 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-30 16:42:14,292 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-30 16:44:04,438 [WARNING] Not Found: /blogs/289856cb-075b-4784-9c5a-3e092f9a92ae/
+2021-04-30 16:48:31,777 [INFO] Tag search with tag 'python'
+2021-04-30 16:48:43,927 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-30 16:49:15,564 [INFO] Tag search with tag 'python'
+2021-04-30 16:49:56,557 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-30 16:51:31,887 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-30 17:07:22,010 [WARNING] Not Found: /blogs/all_activity/
+2021-04-30 17:07:51,033 [WARNING] Not Found: /blogs/e3673499-cedc-468d-b45e-f6d083c7dc2a/all_activity
+2021-04-30 17:09:09,568 [ERROR] Internal Server Error: /blogs/e3673499-cedc-468d-b45e-f6d083c7dc2a/all_activity/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py", line 96, in delete
+    blog = self.model_class.objects.get(uid = pk)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 417, in get
+    self.model._meta.object_name
+blogs.models.Blogs.DoesNotExist: Blogs matching query does not exist.
+2021-04-30 17:09:31,008 [ERROR] Internal Server Error: /blogs/e3673499-cedc-468d-b45e-f6d083c7dc2a/all_activity/
+Traceback (most recent call last):
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py", line 96, in delete
+    blog = self.model_class.objects.get(uid = pk)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Shilpa Bundela\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 417, in get
+    self.model._meta.object_name
+blogs.models.Blogs.DoesNotExist: Blogs matching query does not exist.
+2021-04-30 17:15:44,576 [WARNING] Forbidden (CSRF cookie not set.): /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment
+2021-04-30 17:15:49,093 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 17:16:54,476 [INFO] all comments of blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'
+2021-04-30 17:17:38,711 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 17:17:53,653 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\mixin.py changed, reloading.
+2021-04-30 17:19:23,609 [WARNING] Not Found: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7
+2021-04-30 17:19:43,565 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 17:19:44,611 [INFO] commented on blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'
+2021-04-30 17:20:55,301 [INFO] commented on blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'
+2021-04-30 17:22:44,159 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 17:25:02,409 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 17:25:12,389 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 17:27:39,769 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 17:27:46,719 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 17:28:39,269 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 17:47:48,233 [INFO] commented on blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'
+2021-04-30 17:48:06,430 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 17:49:00,723 [INFO] commented on blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'
+2021-04-30 17:50:08,210 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 17:51:52,181 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 17:51:57,562 [WARNING] Unauthorized: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 17:52:11,711 [WARNING] Unauthorized: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 17:53:50,915 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 17:59:37,801 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 18:00:17,371 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 18:04:09,391 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-30 18:04:50,901 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\viewsets.py changed, reloading.
+2021-04-30 18:05:07,045 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 18:09:08,681 [INFO] C:\Users\Shilpa Bundela\Desktop\Rachit\Projects\Django\user_blogs\blogs\mixin.py changed, reloading.
+2021-04-30 18:09:47,562 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 18:10:23,452 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 18:10:35,932 [INFO] commented on blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'
+2021-04-30 18:10:35,932 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 18:11:06,842 [INFO] commented on blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'
+2021-04-30 18:11:59,202 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 18:12:05,372 [INFO] commented on blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'
+2021-04-30 18:12:05,372 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 18:12:20,217 [INFO] commented on blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'
+2021-04-30 18:12:58,221 [WARNING] Bad Request: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/comment/
+2021-04-30 18:13:05,107 [INFO] commented on blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'
+2021-04-30 18:24:29,662 [INFO] commented on blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'
+2021-04-30 18:24:31,373 [WARNING] Method Not Allowed: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/like/
+2021-04-30 18:26:03,608 [INFO] commented on blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'
+2021-04-30 18:26:04,723 [WARNING] Method Not Allowed: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/like/
+2021-04-30 18:26:14,173 [INFO] commented on blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'
+2021-04-30 18:26:27,103 [WARNING] Method Not Allowed: /blogs/589d40e4-04f3-4211-ad64-4e01511209b7/like/
+2021-04-30 18:26:56,172 [INFO] commented on blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'
+2021-04-30 18:26:57,018 [INFO] disliked on blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'
+2021-04-30 18:27:09,533 [INFO] commented on blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'
+2021-04-30 18:27:09,562 [INFO] disliked on blog with uid = '589d40e4-04f3-4211-ad64-4e01511209b7'

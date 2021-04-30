@@ -25,16 +25,15 @@ logging.basicConfig(
 class CrudViewset(PaginationHandlerMixin, BaseFilterMixin, TagMixin, GenMixin):
     pagination_class    = PageNumberPagination  
     def list(self, request):
+        import pdb; pdb.set_trace()
         queryset = self.search_tag(request, self.filter_queryset(self.model_class.objects.filter(user = request.user) ))
         page = self.paginate_queryset(queryset)
-        if page is not None:
-            serializer = self.get_paginated_response(self.get_serializer(page, many=True).data)
-        else:
-            serializer = self.get_serializer(queryset, many=True)
+        serializer = self.get_paginated_response(self.get_serializer(page, many=True).data)
         logging.info("list of blogs for the user '%s'", str(request.user.uid))
         return Response(serializer.data)
 
     def retrieve(self, request, pk=None):
+       
         queryset = self.filter_queryset(self.model_class.objects.filter(user = request.user) )
         blog = get_object_or_404(queryset, pk=pk)
         serializer = self.get_serializer(blog)
@@ -104,6 +103,7 @@ class CrudViewset(PaginationHandlerMixin, BaseFilterMixin, TagMixin, GenMixin):
             url_path="tags/(?P<tag>[^/.]+)",
             url_name="tags_search")
     def tags_search(self, request, *args, **kwargs):
+        import pdb; pdb.set_trace()
         queryset = self.filter_queryset(self.model_class.objects.filter(user = request.user))
         queryset = queryset.filter(tags__name = kwargs['tag'])
         serializer = self.get_serializer(queryset, many=True)

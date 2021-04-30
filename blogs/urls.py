@@ -21,7 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 router = DefaultRouter()
-router.register(r'blogs', views.CreateBlogViewSet, basename='create_blog')
+router.register(r'', views.CreateBlogViewSet, basename='create_blog')
 
 urlpatterns = [
     path('', include(router.urls)),
